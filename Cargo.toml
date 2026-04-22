@@ -2,6 +2,7 @@
 name = "simple-completion-language-server"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/nikhilr612/hx-scls"
 
 [[bin]]
 name = "simple-completion-language-server"
@@ -34,3 +35,8 @@ tracing-appender = "0.2"
 
 [dev-dependencies]
 test-log = { version = "0.2", default-features = false, features = ["trace"] }
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
